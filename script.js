@@ -58,3 +58,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+function trackPreference(foodType) {
+
+    const data = {
+        preference: foodType,
+        time: new Date().toLocaleString()
+    };
+    
+    console.log('Tracking food preference:', data);
+    const trackedDataElement = document.getElementById('trackedData');
+    trackedDataElement.textContent = `Preference tracked: ${data.preference} (${data.time})`;
+}
+const hamburgerButton = document.getElementById('hamburgerButton');
+const sandwichButton = document.getElementById('sandwichButton');
+
+hamburgerButton.addEventListener('click', function() {
+    trackPreference('Hamburger');
+});
+
+sandwichButton.addEventListener('click', function() {
+    trackPreference('Sandwich');
+});
+
+
+
