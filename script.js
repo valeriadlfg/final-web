@@ -50,3 +50,11 @@ tabInputs.forEach(function(input) {
 
     })
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('changeColorButton').addEventListener('click', function() {
+        var selectedColor = document.getElementById('colorPicker').value;
+        document.body.style.backgroundColor = selectedColor;
+    });
+});
+
